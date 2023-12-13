@@ -23,3 +23,19 @@ int[] d; //참조타입
 instance 안에 선언한 값이 저장됨
 그리고 변수안에는 instance의 주소값이 저장됨
 
+```
+int[] c = {1,2,3};
+int[] b = c;
+
+System.out.println(c[1]); // 2
+System.out.println(d[1]); //2
+
+c[2] = 55;
+
+System.out.println(c[2]); //55
+System.out.println(d[2]); //55
+```
+reference type은 값 자체를 저장하는 것이 아니라 값을 저장한 주소값을 저장하기 때문에
+<br/>
+원래의 값인 c의 값이 변경되면 d의 값도 변경되는 것이다
+(사실 변경되는 건 아님, d의 값 안에 있는 참조값은 변하지 않았음)
